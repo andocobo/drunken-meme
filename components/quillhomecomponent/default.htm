@@ -1,0 +1,75 @@
+{% set featurePosts = __SELF__.featurePosts %}
+
+<div id="mainFeature" class="blue-swirls feature coloured">
+	<div class="container big-padding">
+		<div class="row">
+    		
+    		<div id="messageContainer" class="col-md-6 col-sm-7">
+				{% for feature in featurePosts %}
+				
+					<div class="row featureMessage">
+						{{ feature.content|raw }}				
+					</div>
+
+				{% endfor %}
+			</div>
+
+			<div class="col-md-offset-2 col-sm-offset-1 col-md-4 col-sm-4 hidden-xs">
+		    	<div class="circle white">
+		    		<div class="circle-content">
+		    			<div>
+		    				{% for feature in featurePosts %}
+		    					<i class="{{ feature.icon }}"></i>
+		    				{% endfor %}
+		    			</div>
+		    		</div>
+		    	</div>
+		    </div>
+			
+			{% partial 'home/featureButtons' %}
+			
+    	</div>
+    </div>
+</div>
+
+<div class="feature">
+	<div class="container big-padding">
+		<div class="row">
+			<div data-sr="enter left, hustle 100px, no-reset" class="col-sm-6 featureImage">
+    			<img class="img-responsive" src="/storage/app/{{ __SELF__.serviceOverviews.web.image }}">
+    		</div>
+
+			<div data-sr="enter right, hustle 100px, no-reset" class="col-sm-6">
+				{{ __SELF__.serviceOverviews.web.content|raw }}
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="red-designtools feature coloured">
+	<div class="container big-padding">
+		<div class="row">
+    		<div data-sr="enter right, hustle 100px, no-reset" class="pull-right img-responsive col-sm-6">
+	    		<img class="img-responsive" src="/storage/app/{{ __SELF__.serviceOverviews.writing.image }}">
+	    	</div>
+
+    		<div data-sr="enter left, hustle 100px, no-reset" class="pull-left col-sm-6">
+    			{{ __SELF__.serviceOverviews.writing.content|raw }}
+    		</div>
+    	</div>
+    </div>
+</div>
+
+<div class="feature">
+	<div class="container big-padding">
+		<div class="row">
+			<div data-sr="enter left, hustle 100px, no-reset" class="col-sm-6 featureImage">
+    			<img class="img-responsive" src="/storage/app/{{ __SELF__.serviceOverviews.web.image }}">
+    		</div>
+
+			<div data-sr="enter right, hustle 100px, no-reset" class="col-sm-6">
+				{{ __SELF__.serviceOverviews.web.content|raw }}
+			</div>
+		</div>
+	</div>
+</div>
